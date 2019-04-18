@@ -1,0 +1,283 @@
+{
+  "schemaVersion": "1",
+  "units": "mm",
+  "spaceId": "5148457",
+  "room": {
+    "obstructions": [],
+    "entrances": [],
+    "walls": [
+      {
+        "id": "A",
+        "points": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          {
+            "x": 2489,
+            "y": 0,
+            "z": 2438
+          }
+        ],
+        "hasBaseboards": true,
+        "baseboardHeight": 76,
+        "hasCrownMoulding": false,
+        "crownMouldingHeight": 102,
+        "construction": "drywall-wood",
+        "designOnWall": true,
+        "wallToWall": true,
+        "preciseWidth": -1
+      }
+    ],
+    "wallMetadata": {
+      "height": 2438,
+      "hasBaseboards": true,
+      "baseboardHeight": 76,
+      "hasCrownMoulding": false,
+      "crownMouldingHeight": 102,
+      "construction": "drywall-wood",
+      "designOnWall": true
+    }
+  },
+  "metadata": {
+    "spaceName": "PairingSpace2",
+    "spaceShape": "one-wall",
+    "spaceUse": "master",
+    "customerId": "",
+    "customerType": "C",
+    "storeId": "16",
+    "plannerId": "32047",
+    "plannerName": "",
+    "customerEmail": "",
+    "customerName": "",
+    "storeAbbrev": "",
+    "sessionId": "4b516cbb-d291-49b2-9cad-489559d45e2a",
+    "spaceType": "other"
+  },
+  "design": {
+    "product": "Closet",
+    "preferences": {
+      "woodColor": "lightbrown",
+      "rodColor": "brown",
+      "metalColor": "lightbrown",
+      "layoutForLighting": false
+    },
+    "zones": [
+      {
+        "id": "gHRlR1aOE",
+        "wall": "A",
+        "alignment": "left",
+        "points": [
+          {
+            "x": 28,
+            "y": 101
+          },
+          {
+            "x": 2461,
+            "y": 2413
+          }
+        ],
+        "sections": [
+          {
+            "id": "s1",
+            "width": 600,
+            "isEmpty": false,
+            "x": 38,
+            "userId": "u1"
+          },
+          {
+            "id": "s2",
+            "width": 600,
+            "isEmpty": false,
+            "x": 638,
+            "userId": "u1"
+          },
+          {
+            "id": "s3",
+            "width": 600,
+            "isEmpty": false,
+            "x": 1238,
+            "userId": "u2"
+          },
+          {
+            "id": "s4",
+            "width": 613,
+            "isEmpty": false,
+            "x": 1838,
+            "userId": "u2"
+          }
+        ],
+        "wallId": "A"
+      }
+    ],
+    "elements": [
+      {
+        "id": "sds_b9027318-f776-41ce-8c84-5f46f383ed7e",
+        "sectionId": "s1",
+        "type": "shelf18",
+        "y": 2112,
+        "rank": 0,
+        "x": 38
+      },
+      {
+        "id": "sds_d98d081a-0738-4c55-a129-af810cfe3f34",
+        "sectionId": "s1",
+        "type": "shelf18",
+        "y": 1920,
+        "rank": 0,
+        "x": 38
+      },
+      {
+        "id": "sds_8bfc83b4-db68-4118-ac01-71949a9c021b",
+        "sectionId": "s2",
+        "type": "shelf18",
+        "y": 960,
+        "rank": 0,
+        "x": 638
+      },
+      {
+        "id": "sds_f4fd61f5-18f4-43dc-9e04-60902a31a06f",
+        "sectionId": "s2",
+        "type": "shelf18",
+        "y": 2112,
+        "rank": 0,
+        "x": 638
+      },
+      {
+        "id": "sds_a801277e-55dc-43f0-98b4-229062dc5853",
+        "sectionId": "s2",
+        "type": "shelfwithrod18",
+        "y": 1920,
+        "rank": 0,
+        "x": 638
+      },
+      {
+        "id": "sds_c2465b3d-e26a-470d-a518-4530138f2003",
+        "sectionId": "s1",
+        "type": "shelfwithrod18",
+        "y": 1600,
+        "rank": 0,
+        "x": 38
+      },
+      {
+        "id": "sds_c4ab1d9a-b110-4cce-bb04-bbf57b7b8e23",
+        "sectionId": "s3",
+        "type": "shelf18",
+        "y": 2112,
+        "rank": 0,
+        "x": 1238
+      },
+      {
+        "id": "sds_6fbd28c6-df33-4690-9391-010a5504d5a6",
+        "sectionId": "s3",
+        "type": "shelfwithrod18",
+        "y": 1920,
+        "rank": 0,
+        "x": 1238
+      },
+      {
+        "id": "sds_b895f601-104e-4177-9e14-18a8e05317c6",
+        "sectionId": "s3",
+        "type": "shelf18",
+        "y": 960,
+        "rank": 0,
+        "x": 1238
+      },
+      {
+        "id": "sds_0296be53-51c0-49e8-892d-ae4837f8b694",
+        "sectionId": "s4",
+        "type": "shelf18",
+        "y": 2112,
+        "rank": 0,
+        "x": 1838
+      },
+      {
+        "id": "sds_519d2065-0daa-44b8-97f9-fe46b37bc794",
+        "sectionId": "s4",
+        "type": "shelfwithrod18",
+        "y": 1920,
+        "rank": 0,
+        "x": 1838
+      },
+      {
+        "id": "sds_ec984164-2609-4e7f-8aeb-7638f12f08ed",
+        "sectionId": "s4",
+        "type": "shelfwithrod18",
+        "y": 960,
+        "rank": 0,
+        "x": 1838
+      },
+      {
+        "id": "7JqpXN4pU",
+        "sectionId": "s2",
+        "type": "angledshoeshelf",
+        "y": 768,
+        "rank": 0,
+        "x": 638
+      },
+      {
+        "id": "Hp_qOLvHR",
+        "sectionId": "s2",
+        "type": "angledshoeshelf",
+        "y": 512,
+        "rank": 0,
+        "x": 638
+      },
+      {
+        "id": "ADFvyMOay",
+        "sectionId": "s3",
+        "type": "angledshoeshelf",
+        "y": 768,
+        "rank": 0,
+        "x": 1238
+      },
+      {
+        "id": "t2EDC_oUB",
+        "sectionId": "s3",
+        "type": "angledshoeshelf",
+        "y": 512,
+        "rank": 0,
+        "x": 1238
+      }
+    ],
+    "accessories": [],
+    "users": [
+      {
+        "age": 1,
+        "color": "#005DAB",
+        "name": "User1",
+        "gender": "female",
+        "allocation": 50,
+        "height": 1524,
+        "preferences": {
+          "shortHang": true,
+          "longHang": true,
+          "drawers": false,
+          "shoes": true,
+          "shelves": true,
+          "lighting": false
+        },
+        "id": "u1"
+      },
+      {
+        "age": 1,
+        "color": "#85CFE8",
+        "name": "User2",
+        "gender": "male",
+        "allocation": 50,
+        "height": 1524,
+        "preferences": {
+          "shortHang": true,
+          "longHang": false,
+          "drawers": false,
+          "shoes": true,
+          "shelves": true,
+          "lighting": false
+        },
+        "id": "u2"
+      }
+    ]
+  },
+  "quoteNotes": ""
+}
