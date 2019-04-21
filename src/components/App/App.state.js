@@ -4,7 +4,7 @@ import spaceDocument0 from '../../data/space_5148448';
 import spaceDocument1 from '../../data/space_5148457';
 import spaceDocument2 from '../../data/space_5148443';
 
-const states = [
+export const states = [
   {
     spaceDocument: spaceDocument0,
     imageUrls: [
