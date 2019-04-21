@@ -1,13 +1,27 @@
-body {
-  margin: 0;
+:root {
+  --light-gray: #efefef;
+  --medium-gray: #eaebef;
+  --near-black: #333337;
+  --dark-gray: #8b8b8b;
+
+  --main-fonts: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+  --mono-fonts: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
-  font-family: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+}
+
+:root {
+  background: var(--light-gray);
+  font-family: var(--main-fonts);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #efefef;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--mono-fonts);
 }
