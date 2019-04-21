@@ -1,8 +1,9 @@
 :root {
-  --light-gray: #efefef;
+  --light-gray: #f6f8fa;
   --medium-gray: #eaebef;
   --near-black: #333337;
   --dark-gray: #8b8b8b;
+  --white: #ffffff;
 
   --main-fonts: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
   --mono-fonts: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -20,6 +21,8 @@
   font-family: var(--main-fonts);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--near-black);
+  letter-spacing: 0.5px;
 }
 
 code {

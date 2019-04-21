@@ -1,0 +1,59 @@
+.SummaryRow {
+  display: flex;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 1px 6px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  font-family: 'proxima_nova_altbold';
+  padding: 0px 12px;
+  height: 36px;
+  margin-top: 12px;
+}
+
+.SummaryRow .main {
+  display: flex;
+  font-family: 'proxima_nova_altbold';
+  height: 36px;
+  width: 100%;
+}
+
+/* Pad all with 8px on top and bottom. */
+.SummaryRow p {
+  padding: 8px 0;
+}
+
+/* Make the label wider and pull the text to the left. */
+.SummaryRow p:first-of-type {
+  width: 175px;
+  text-align: left;
+}
+
+/* Make numbers take up remaining space and push to the right. */
+.SummaryRow .calculations {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+/* Make numbers text centered and pushed to right, with slight padding and shorter width. */
+.SummaryRow .calculations p {
+  width: 90px;
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* For the totals, no padding right needed. Add border left. */
+.SummaryRow .calculations .total {
+  padding-right: 0px;
+  border-left: 1px solid var(--medium-gray);
+  width: 70px;
+}
+
+/* For inner rows, we don't want the bold font. */
+.SummaryRow.Inner,
+.SummaryRow.Inner .main {
+  font-family: var(--main-fonts);
+}
