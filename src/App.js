@@ -26,8 +26,8 @@ class App extends Component {
         </div>
         <StorageSummary spaceDocument={this.state.spaceDocument} />
         <div className="images">
-          {this.state.imageUrls.map(url => 
-            (<img src={url} alt="Space" width={(100 / this.state.imageUrls.length) + '%'}/>)  
+          {this.state.imageUrls.map((url, index) => 
+            (<img src={url} key={index} alt="Space" width={(100 / this.state.imageUrls.length) + '%'}/>)  
           )}
         </div>
       </div>
