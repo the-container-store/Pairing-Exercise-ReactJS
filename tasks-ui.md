@@ -1,14 +1,14 @@
 # Tasks
 
- - [ ] Clean up App.js (5-10 mins)
+ - [x] Clean up App.js (5-10 mins)
  - [ ] Add styling to Storage Summary (5 mins)
  - [ ] Dry up StorageSummary component (10 mins)
  - [ ] Issue PR (you can use `git publish` on this machine)
 
 ## Clean up App.js
 
- - [ ] Single handler for clicking button
- - [ ] Make button rendering dynamic
+ - [x] Single handler for clicking button
+ - [x] Make button rendering dynamic
 
 ## Add styling to Storage Summary
 
