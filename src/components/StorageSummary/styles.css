@@ -1,0 +1,15 @@
+.user{
+  text-align: left
+}
+
+.user li{
+  list-style-type: none;
+}
+
+.user ul{
+  border: 1px gray solid
+}
+
+.user + .user{
+  margin-left:10px
+}
