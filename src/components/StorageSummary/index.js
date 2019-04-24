@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import storageCalculator from './storageCalculator';
+import './styles.css';
 
 class StorageSummary extends Component {
   render() {
