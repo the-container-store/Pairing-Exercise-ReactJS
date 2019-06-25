@@ -1,0 +1,13 @@
+.user {
+  background-color: #F6F8FA;
+  border: 2px solid #333;
+  border-color: black;
+  margin-right: 20px;
+  padding: 0px 5px;
+  text-align: left;
+
+}
+
+ul { 
+  list-style: none
+}
