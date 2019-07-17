@@ -35,6 +35,34 @@
   float: left;
 } 
 
+.user {
+  margin:0 5px;
+  padding:10px;
+  background:white;
+  border:solid 1px #afafaf;
+  border-radius:5px;
+  text-align: left;
+
+}
+.user-header {
+  font-weight: bold;
+  font-size: 15px;
+  color:#4f4f4f;
+}
+.user hr {
+  border-color: #dfdfdf;
+  margin:3px 1px;
+}
+.user-space {
+  list-style: none;
+  margin:5px 0;
+  padding:0;
+  
+}
+.user-space-entry {
+  text-align: left;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
