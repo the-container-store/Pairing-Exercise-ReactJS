@@ -3,7 +3,7 @@
  - [ ] Clean up App.js (5 mins)
  - [ ] Add styling to Storage Summary (5-10 mins)
  - [ ] Dry up StorageSummary component (10 mins)
- - [ ] Issue PR (you can use `git publish` on this machine)
+ - [ ] Issue PR
 
 ## Clean up App.js
 
