@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
-import StorageSummary from './components/StorageSummary';
-import spaceDocument1 from './data/space_5148448';
-import spaceDocument2 from './data/space_5148457';
-import spaceDocument3 from './data/space_5148443';
+import React, { Component } from "react";
+import "./App.css";
+import StorageSummary from "./components/StorageSummary";
+import spaces from "./data";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      spaceDocument: spaceDocument1,
-      imageUrls: [
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178196&type=DESIGN&name=Floor',
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?name=Wall+A&fileId=7178196&type=DESIGN',
-      ],
+      ...spaces.space1
     };
   }
+
   render() {
     return (
       <div className="App">
@@ -26,44 +21,47 @@ class App extends Component {
         </div>
         <StorageSummary spaceDocument={this.state.spaceDocument} />
         <div className="images">
-          {this.state.imageUrls.map(url => 
-            (<img src={url} alt="Space" width={(100 / this.state.imageUrls.length) + '%'}/>)  
-          )}
+          {this.state.imageUrls.map((url, index) => (
+            <img
+              src={url}
+              key={index}
+              alt="Space"
+              width={100 / this.state.imageUrls.length + "%"}
+            />
+          ))}
         </div>
       </div>
     );
   }
   button1Clicked = () => {
     this.setState({
-      spaceDocument: spaceDocument1,
+      spaceDocument: spaces.space1.spaceDocument,
       imageUrls: [
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178196&type=DESIGN&name=Floor',
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?name=Wall+A&fileId=7178196&type=DESIGN',
-      ],
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178196&type=DESIGN&name=Floor",
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?name=Wall+A&fileId=7178196&type=DESIGN"
+      ]
     });
-  }
+  };
   button2Clicked = () => {
     this.setState({
-      spaceDocument: spaceDocument2,
+      spaceDocument: spaces.space2.spaceDocument,
       imageUrls: [
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178808&type=DESIGN&name=Floor',
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178808&type=DESIGN&name=Wall+A',
-      ],
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178808&type=DESIGN&name=Floor",
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178808&type=DESIGN&name=Wall+A"
+      ]
     });
-  }
+  };
   button3Clicked = () => {
     this.setState({
-      spaceDocument: spaceDocument3,
+      spaceDocument: spaces.space3.spaceDocument,
       imageUrls: [
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Floor',
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+D',
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+A',
-        'https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+B',
-      ],
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Floor",
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+D",
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+A",
+        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+B"
+      ]
     });
-  }
+  };
 }
 
 export default App;
-
-
