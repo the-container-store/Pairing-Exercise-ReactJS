@@ -15,9 +15,19 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <button onClick={this.button1Clicked}>Space 1</button>
-          <button onClick={this.button2Clicked}>Space 2</button>
-          <button onClick={this.button3Clicked}>Space 3</button>
+          {Object.values(spaces).map((space, index) => {
+            const spaceNumber = index + 1;
+
+            return (
+              <button
+                onClick={() => this.buttonClicked(spaceNumber)}
+                data-e2e-test={`space-button-${spaceNumber}`}
+                key={space.spaceDocument.spaceId}
+              >
+                Space {spaceNumber}
+              </button>
+            );
+          })}
         </div>
         <StorageSummary spaceDocument={this.state.spaceDocument} />
         <div className="images">
@@ -33,33 +43,10 @@ class App extends Component {
       </div>
     );
   }
-  button1Clicked = () => {
+  
+  buttonClicked = spaceNumber => {
     this.setState({
-      spaceDocument: spaces.space1.spaceDocument,
-      imageUrls: [
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178196&type=DESIGN&name=Floor",
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?name=Wall+A&fileId=7178196&type=DESIGN"
-      ]
-    });
-  };
-  button2Clicked = () => {
-    this.setState({
-      spaceDocument: spaces.space2.spaceDocument,
-      imageUrls: [
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178808&type=DESIGN&name=Floor",
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178808&type=DESIGN&name=Wall+A"
-      ]
-    });
-  };
-  button3Clicked = () => {
-    this.setState({
-      spaceDocument: spaces.space3.spaceDocument,
-      imageUrls: [
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Floor",
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+D",
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+A",
-        "https://www.containerstore.com/elfa/wall/imageContent.htm?fileId=7178188&type=DESIGN&name=Wall+B"
-      ]
+      ...spaces[`space${spaceNumber}`]
     });
   };
 }
