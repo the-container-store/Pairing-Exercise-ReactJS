@@ -33,6 +33,12 @@
 
 .App .user {
   float: left;
+  border-style: solid;
+  border-width: .1em;
+  border-color: grey;
+  /* border */
+  margin: 1em;
+  padding: 1em;
 } 
 
 @keyframes App-logo-spin {
@@ -42,4 +48,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cardContent {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  text-align: left;
 }
