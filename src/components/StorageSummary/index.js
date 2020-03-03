@@ -6,6 +6,7 @@ class StorageSummary extends Component {
     const spaceId = this.props.spaceDocument.spaceId;
     const spaceUrl = `https://www.containerstore.com/custom-closets/space/view.htm?spaceId=${spaceId}`;
     const amountOfShelves = storageCalculator.calculateShelvingLength(this.props.spaceDocument);
+    const amountOfHanging = storageCalculator.calculateHangingLength(this.props.spaceDocument);
     return (
       <div className="cardContent">
         <h1>Storage Summary <a href={spaceUrl}>#{spaceId}</a></h1>
@@ -13,7 +14,7 @@ class StorageSummary extends Component {
           <h2>{this.props.spaceDocument.design.users[0].name}</h2>
           <ul>
             <li>Shelves: {amountOfShelves} inches</li>
-            <li>Hanging: ? inches</li>
+            <li>Hanging: {amountOfHanging} inches</li>
             <li>Shoes: ? shoes</li>
             <li>Drawers: ? </li>
           </ul>
