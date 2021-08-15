@@ -4,7 +4,7 @@
 - ```npm install```
 - ```npm start```
 - Go to http://localhost:3000
-- The buttons and images are just visual aids for showing you what the closet represented by the three sampe space documents look like
+- The buttons and images are just visual aids for showing you what the closet represented by the three sample space documents look like
 - Your primary goal is to complete the component that shows a summary of available storage
 - Make a PR with your work (if you don't have access github access for the PR let us know)
 

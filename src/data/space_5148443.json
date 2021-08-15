@@ -200,7 +200,7 @@
             "y": 2413
           }
         ],
-        "sections": [
+       "sections": [
           {
             "id": "s4",
             "width": 553,
@@ -211,7 +211,7 @@
           {
             "id": "s5",
             "width": 600,
-            "isEmpty": false,
+            "is Empty": false,
             "x": 591,
             "userId": "u2"
           },
