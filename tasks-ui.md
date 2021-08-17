@@ -3,7 +3,7 @@
  - [x] Clean up App.js (5 mins)
  - [x] Add styling to Storage Summary (5-10 mins)
  - [x] Dry up StorageSummary component (10 mins)
- - [ ] Issue PR
+ - [x] Issue PR
 
 ## Clean up App.js
 
