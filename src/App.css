@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  padding: 10px;
+}
+
+.App button {
+  background-color: #005DAA;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all .2s;
+}
+
+.App button:hover {
+  background: #fff;
+  color: #005DAA;
+  border: 1px solid #005DAA;
+}
+
+.App button.active {
+  background: #fff;
+  color: #005DAA;
+  border: 1px solid #005DAA;
 }
 
 .App-logo {

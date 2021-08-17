@@ -1,0 +1,30 @@
+h1 {
+    font-weight: 400;
+}
+
+h1 a, h1 a:visited, h1 a:link{
+    color: #005DAA;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.user {
+    border: 1px solid lightgray;
+    margin: 0 15px;
+    padding: 0px 30px;
+}
+
+.user h2 {
+    font-weight: 400;
+}
+
+.card {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    line-height: 1.5;
+}
