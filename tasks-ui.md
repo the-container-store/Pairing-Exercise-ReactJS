@@ -1,13 +1,13 @@
 # Tasks
 
- - [ ] Clean up App.js (5 mins)
+ - [x] Clean up App.js (5 mins)
  - [ ] Add styling to Storage Summary (5-10 mins)
  - [ ] Dry up StorageSummary component (10 mins)
  - [ ] Issue PR
 
 ## Clean up App.js
 
- - [ ] Single handler for clicking button
+ - [x] Single handler for clicking button
 
 ## Add styling to Storage Summary
 
