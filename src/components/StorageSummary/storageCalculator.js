@@ -1,3 +1,11 @@
+import {
+  drawerDeep,
+	drawerDoubleShallow,
+	ftToInch,
+	mmToInch,
+	shoeToInch
+} from '../../constants'
+
 const getSectionWidthMap = (spaceDocument, userId) => {
   const sectionWidthMap = {};
   spaceDocument.design.zones.forEach(zone => {
@@ -10,7 +18,6 @@ const getSectionWidthMap = (spaceDocument, userId) => {
   return sectionWidthMap;
 };
 
-
 const calculateShelvingLength = (spaceDocument, userId) => {
   const sectionWidthMap = getSectionWidthMap(spaceDocument, userId)
   const shelves = spaceDocument.design.elements.filter(element => element.type.includes('shelf'));
@@ -19,7 +26,7 @@ const calculateShelvingLength = (spaceDocument, userId) => {
     const width = sectionWidthMap[shelf.sectionId] || 0;
     totalLength += width;
   });
-  return Math.round(totalLength / 25.4);
+  return Math.round(totalLength / mmToInch);
 };
 
 const calculateHangingShelvingLength = (spaceDocument, userId) => {
@@ -31,7 +38,7 @@ const calculateHangingShelvingLength = (spaceDocument, userId) => {
     const width = sectionWidthMap[shelf.sectionId] || 0;
     totalLength += width;
   });
-  return Math.round(totalLength / 25.4);
+  return Math.round(totalLength / mmToInch);
 };
 
 const calculateShoeSpace = (spaceDocument, userId) => {
@@ -43,7 +50,7 @@ const calculateShoeSpace = (spaceDocument, userId) => {
     const width = sectionWidthMap[shelf.sectionId] || 0;
     shoeSpace += width;
   });
-  return Math.floor(shoeSpace / 25.4 / 8);
+  return Math.floor(shoeSpace / mmToInch / shoeToInch);
 };
 
 const calculateDrawerSpace = (spaceDocument, userId) => {
@@ -53,7 +60,7 @@ const calculateDrawerSpace = (spaceDocument, userId) => {
   let drawerSpace = 0;
   drawers.forEach(shelf => {
     if (sectionWidthMap[shelf.sectionId]) {
-      const drawerAmt = shelf.type.includes('double') ? 2 : 1
+      const drawerAmt = shelf.type.includes('double') ? drawerDoubleShallow : drawerDeep 
       drawerSpace += drawerAmt;
     }
   });
@@ -72,8 +79,8 @@ function unitToDisplay(value = 0, unit = 'in') {
   const inchSymbol = '\u2033';
 
   if (unit === 'ft') {
-    const ftToInches = Math.floor(value / 12);
-    const inchesRemainder = value % 12;
+    const ftToInches = Math.floor(value / ftToInch);
+    const inchesRemainder = value % ftToInch;
     return `${ftToInches}${ftSymbol} ${inchesRemainder}${inchSymbol}`
   } else {
     return `${value}${inchSymbol}`
