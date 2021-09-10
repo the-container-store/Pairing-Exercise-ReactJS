@@ -1,4 +1,4 @@
-import storageCalculator from '../storageCalculator';
+import {calculateShelvingLength} from '../storageCalculator';
 
 describe('Calculates available storage for each user', () => {
   it('should calculate the right amount of shelving in inches', () => {
@@ -34,6 +34,6 @@ describe('Calculates available storage for each user', () => {
         ]
       },
     }
-    expect(storageCalculator.calculateShelvingLength(spaceDocument)).toEqual(48);
+    expect(calculateShelvingLength(spaceDocument)).toEqual(48);
   });
 });
