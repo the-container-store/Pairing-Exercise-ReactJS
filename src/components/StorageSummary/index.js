@@ -60,7 +60,7 @@ class StorageSummary extends Component {
             unit={this.state.unit}
           />
         </div>
-        <div className={'radio'} >
+        <div className={'radio'}>
           <input
             checked={this.state.unit === 'ft'}
             id="feet"
