@@ -35,6 +35,19 @@
   float: left;
 } 
 
+.App .container {
+  display: flex;
+  justify-content: center;
+}
+
+.App .card {
+  border: 3px solid #F6F8FA;
+  list-style: none;
+  margin: 0 20px 20px 20px;
+  padding: 35px;
+  text-align: left;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

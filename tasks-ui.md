@@ -1,7 +1,7 @@
 # Tasks
 
  - [x] Clean up App.js (5 mins)
- - [ ] Add styling to Storage Summary (5-10 mins)
+ - [x] Add styling to Storage Summary (5-10 mins)
  - [x] Dry up StorageSummary component (10 mins)
  - [ ] Issue PR
 
@@ -11,10 +11,10 @@
 
 ## Add styling to Storage Summary
 
- - [ ] Remove bullet points
- - [ ] Add border around storage summary "cards"
- - [ ] Spacing between cards
- - [ ] Left align card content
+ - [x] Remove bullet points
+ - [x] Add border around storage summary "cards"
+ - [x] Spacing between cards
+ - [x] Left align card content
 
 ## Improve StorageSummary component
 
