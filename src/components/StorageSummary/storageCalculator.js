@@ -60,9 +60,30 @@ const calculateDrawerSpace = (spaceDocument, userId) => {
   return drawerSpace;
 };
 
+/**
+ * Display unit in either inches or feet
+ * @param {number} value - value in inches
+ * @param {String='in','ft'} unit - unit to display 
+ * @returns {String}
+ *  a string of the final unit to display
+ */
+function unitToDisplay(value = 0, unit = 'in') {
+  const ftSymbol = '\u2032';
+  const inchSymbol = '\u2033';
+
+  if (unit === 'ft') {
+    const ftToInches = Math.floor(value / 12);
+    const inchesRemainder = value % 12;
+    return `${ftToInches}${ftSymbol} ${inchesRemainder}${inchSymbol}`
+  } else {
+    return `${value}${inchSymbol}`
+  }
+};
+
 export {
   calculateShelvingLength,
   calculateHangingShelvingLength,
   calculateShoeSpace,
-  calculateDrawerSpace
+  calculateDrawerSpace,
+  unitToDisplay
 };

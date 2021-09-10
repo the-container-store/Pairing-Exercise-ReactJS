@@ -3,10 +3,19 @@ import {
   calculateShelvingLength,
   calculateHangingShelvingLength,
   calculateShoeSpace,
-  calculateDrawerSpace
+  calculateDrawerSpace,
+  unitToDisplay
 } from './storageCalculator';
 
 class StorageSummary extends Component {
+  state = {
+    unit: 'ft'
+  };
+
+  handleUnitChange = (e) => {
+    this.setState({ unit: e.target.value });
+  };
+
   render() {
     const spaceId = this.props.spaceDocument.spaceId;
     const spaceUrl = `https://www.containerstore.com/custom-closets/space/view.htm?spaceId=${spaceId}`;
@@ -38,6 +47,7 @@ class StorageSummary extends Component {
                 shelvesAmt={amountOfShelves}
                 shoesAmt={amountOfShoeSpace}
                 title={user.name}
+                unit={this.state.unit}
               />
             )
           })}
@@ -47,7 +57,28 @@ class StorageSummary extends Component {
             shelvesAmt={shelvesTotal}
             shoesAmt={shoeSpaceTotal}
             title={'Total'}
+            unit={this.state.unit}
           />
+        </div>
+        <div className={'radio'} >
+          <input
+            checked={this.state.unit === 'ft'}
+            id="feet"
+            name="feet"
+            onChange={this.handleUnitChange}
+            type="radio"
+            value="ft"
+          />
+          <label htmlFor="feet">Feet</label>
+          <input
+            checked={this.state.unit === 'in'}
+            id="inch"
+            name="inch"
+            onChange={this.handleUnitChange}
+            type="radio"
+            value="in"
+          />
+          <label htmlFor="inch">Inch</label>
         </div>
       </div>
     );
@@ -56,14 +87,14 @@ class StorageSummary extends Component {
 
 
 function UserCard(props) {
-  const { title = '', shelvesAmt = 0, hangingAmt = 0, shoesAmt = 0, drawersAmt = 0 } = props;
+  const { title = '', shelvesAmt = 0, hangingAmt = 0, shoesAmt = 0, drawersAmt = 0, unit = 'in' } = props;
 
   return (
     <div className="user">
       <h2>{title}</h2>
       <ul className={"card"}>
-        <li>Shelves: {shelvesAmt}</li>
-        <li>Hanging: {hangingAmt}</li>
+        <li>Shelves: {unitToDisplay(shelvesAmt, unit)}</li>
+        <li>Hanging: {unitToDisplay(hangingAmt, unit)}</li>
         <li>Shoes: {shoesAmt}</li>
         <li>Drawers: {drawersAmt}</li>
       </ul>
